@@ -1,0 +1,23 @@
+\usepackage[fontsize=16pt]{scrextend}
+\usepackage[sfdefault]{FiraSans}
+\usepackage{FiraMono}
+\geometry{top=0.75in,left=0.5in,bottom=0.5in,right=0.5in}
+\twocolumn
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+   \pagestyle{fancy}
+   \fancyhead[L]{Loosely Covered}
+   \fancyhead[C]{Page \thepage\ of \pageref{LastPage}}
+   \fancyhead[R]{\today}
+   \fancyfoot[L]{}
+   \fancyfoot[C]{}
+   \fancyfoot[R]{}
+\let\paragraph\oldparagraph
+\let\subparagraph\oldsubparagraph
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
