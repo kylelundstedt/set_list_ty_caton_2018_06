@@ -10,7 +10,7 @@ library(tidyverse)
 set_lists <- gs_title("LC Gigs Set Lists")
 
 # connect to gig-specific tab in that workbook
-gig_name <- "2017-06 Ty Caton"
+gig_name <- "20180602 Ty Caton"
 set_list <- set_lists %>% gs_read(ws = gig_name) %>%
   mutate( Artist = str_replace_all(Artist, "/", "-") ) %>%
   mutate( Artist = str_replace_all(Artist, "’" , "") ) %>%
@@ -33,7 +33,7 @@ bookfilename <- str_c('book_filename: "', gig_name, '"\n', 'rmd_files: [')
 write(bookfilename, file = "_bookdown.yml")
 songs <- paste0('\t"lead_sheets/',
                  set_list$Title_dash,
-                 '.Rmd",')
+                 '.md",')
 write(songs, file = "_bookdown.yml", append = TRUE)
 outputs <- paste0('\n]\n',
                  'output_dir: docs')
