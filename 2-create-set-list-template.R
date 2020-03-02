@@ -10,7 +10,7 @@ library(tidyverse)
 set_lists <- gs_title("LC Gigs Set Lists")
 
 # connect to gig-specific tab in that workbook
-gig_name <- "20180602 Ty Caton"
+gig_name <- "Master"
 set_list <- set_lists %>% gs_read(ws = gig_name) %>%
   mutate( Artist = str_replace_all(Artist, "/", "-") ) %>%
   mutate( Artist = str_replace_all(Artist, "’" , "") ) %>%
@@ -18,8 +18,8 @@ set_list <- set_lists %>% gs_read(ws = gig_name) %>%
   mutate( Artist = str_replace_all(Artist, "&", "n") ) %>%
   mutate( Artist = str_replace_all(Artist, "\\.", "") ) %>%
   mutate( Title = str_replace_all(Title, "/", "-") ) %>%
-  mutate( Title = str_replace_all(Title, "’" , "") ) %>%
-  mutate( Title = str_replace_all(Title, "'", "") ) %>%
+  mutate( Title = str_replace_all(Title, "’" , "-") ) %>%
+  mutate( Title = str_replace_all(Title, "'", "-") ) %>%
   mutate( Title = str_replace_all(Title, "&", "n") ) %>%
   mutate( Title = str_replace_all(Title, "\\.", "") ) %>%
   mutate( Artist_Title =

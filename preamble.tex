@@ -1,10 +1,8 @@
 \usepackage[fontsize=14pt]{scrextend}
 \usepackage[sfdefault]{FiraSans}
 \usepackage{FiraMono}
-\usepackage{hyperref}
 \geometry{top=0.75in,left=0.5in,bottom=0.5in,right=0.5in}
 \twocolumn
-
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{caption}
@@ -19,18 +17,19 @@
 \usepackage{lastpage}
 \usepackage{fancyhdr}
    \pagestyle{fancy}
-   \fancyhead[L]{JMB Band}
+   \fancyhead[L]{Loosely Covered - Acoustic}
    \fancyhead[C]{Page \thepage\ of \pageref{LastPage}}
-   \fancyhead[R]{\today}
+   \fancyhead[R]{June 2, 2018}
    \fancyfoot[L]{}
    \fancyfoot[C]{}
    \fancyfoot[R]{}
 \let\paragraph\oldparagraph
 \let\subparagraph\oldsubparagraph
-\usepackage{titlesec}
+\usepackage[compact]{titlesec}
 \titlespacing*{\section}      {0em}{.75em}{.5em}
 \titlespacing*{\subsection}   {0em}{.50em}{.25em}
 \titlespacing*{\subsubsection}{0em}{.15em}{0em}
 \titlespacing*{\paragraph}    {0em}{.15em}{0em}
 \let\oldsection\section
 \renewcommand\section{\clearpage\oldsection}
+% \usepackage{hyperref}
